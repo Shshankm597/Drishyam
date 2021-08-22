@@ -14,6 +14,7 @@ export const AuthProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("authToken"))
   );
 
+
   if (token) {
     console.log("token set");
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;

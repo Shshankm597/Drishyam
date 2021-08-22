@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from  "./Account.module.css";
 import { useAuth } from "../../context";
-import axios from "axios";
 
 export default function Account() {
   const { user, updateAccountDetails } = useAuth();
@@ -61,7 +60,7 @@ export default function Account() {
         className={`input-field ${styles.inputField}`}
         value={user.password}
       />
-      <div className="space-y-1"></div>
+      {/* <div className="space-y-1"></div>
       <span>New Password</span>
       <input
         readOnly={!isEditMode}
@@ -69,7 +68,7 @@ export default function Account() {
         className={`input-field ${styles.inputField}`}
         value={newPassword}
         onChange={(e) => setNewPassword(() => e.target.value)}
-      />
+      /> */}
     </div>
   );
 }

@@ -139,7 +139,7 @@ export default function VideoDetails() {
                 <div
                   className={`flex flex-wrap justify-around ${styles.buttonBar}`}
                 >
-                  <button
+                  {/* <button
                     onClick={() =>
                       toggleInPlaylist(getPlaylistByName("Saved Videos")._id)
                     }
@@ -245,7 +245,7 @@ export default function VideoDetails() {
                         </ul>
                       </div>
                     )}
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex flex-wrap">
                   <div
@@ -258,7 +258,7 @@ export default function VideoDetails() {
                         visibility
                       </span>
                       <div className={`space-x-0-5`}></div>
-                      <span>{video.viewCount} views</span>
+                      <span>{video.views}</span>
                     </div>
                     <div
                       className={`flex items-center flex-1 justify-between ${styles.statItem}`}
@@ -267,30 +267,12 @@ export default function VideoDetails() {
                         favorite
                       </span>
                       <div className={`space-x-0-5`}></div>
-                      <span>{video.likeCount} likes</span>
+                      <span>{video.likes} likes</span>
                     </div>
                   </div>
                   <div
                     className={`flex justify-around py-2 ${styles.stats} w-full`}
                   >
-                    <div
-                      className={`flex items-center flex-1 justify-between ${styles.statItem}`}
-                    >
-                      <span className={`material-icons-round ${styles.icon}`}>
-                        forum
-                      </span>
-                      <div className={`space-x-0-5`}></div>
-                      <span>{video.commentCount} comments</span>
-                    </div>
-                    <div
-                      className={`flex items-center flex-1 justify-between ${styles.statItem}`}
-                    >
-                      <span className={`material-icons-round ${styles.icon}`}>
-                        timelapse
-                      </span>
-                      <div className={`space-x-0-5`}></div>
-                      <span>{video.publishedDate}</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -311,7 +293,7 @@ const AuthModal = ({ setShowAuthModal }) => {
   return (
     <div className={`${styles.modalOuter}`}>
       <div className={`${styles.modalInner}`}>
-        <h2>Uh Oh!</h2>
+        <h2>Sorry!</h2>
         <p>You need to login in order to add videos to your playlists.</p>
         <div className="flex items-center justify-center">
           <button

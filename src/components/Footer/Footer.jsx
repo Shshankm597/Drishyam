@@ -9,7 +9,7 @@ export default function Footer() {
           <span className={styles.logoText}>DRISHYAM</span>
         </Link>
         <span className={`${styles.subtitle}`}>
-          by&nbsp;&nbsp;
+          Proudly&nbsp;made&nbsp;in&nbsp;India&nbsp;by&nbsp;&nbsp;
           <a
             className={`${styles.username}`}
             target="_blank"

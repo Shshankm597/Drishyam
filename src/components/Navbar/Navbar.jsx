@@ -10,24 +10,12 @@ export default function Navbar({ theme, setTheme }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { user } = useAuth();
-
+  
   const authBtnHandler = () => {
     user
       ? setShowLogoutModal(true)
       : navigate("/login", { state: { from: pathname } });
   };
-
-  // const switchTheme = () => {
-  //   if (theme === "light") {
-  //     document.documentElement.setAttribute("data-theme", "dark");
-  //     localStorage.setItem("theme", "dark");
-  //     setTheme("dark");
-  //   } else {
-  //     document.documentElement.setAttribute("data-theme", "light");
-  //     localStorage.setItem("theme", "light");
-  //     setTheme("light");
-  //   }
-  // };
 
   return (
     <div className={`${styles.navOuter}`}>
@@ -43,10 +31,12 @@ export default function Navbar({ theme, setTheme }) {
           <Link to="/">Home</Link>
           <div className="space-x-1"></div>
           <div className="space-x-1"></div>
-          <Link to="/playlists">Playlists</Link>
+          {/* <Link to="/playlists">Playlists</Link>
           <div className="space-x-1"></div>
-          <div className="space-x-1"></div>
-          <Link to="/account">Account</Link>
+          <div className="space-x-1"></div> */}
+          {localStorage?.getItem("authUser", JSON.stringify(user)) &&
+              <Link to="/account">Account</Link>
+          }
           <div className="space-x-1"></div>
           <div className="space-x-1"></div>
           <button

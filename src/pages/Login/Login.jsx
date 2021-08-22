@@ -89,6 +89,8 @@ export default function Login() {
           >
             Not A Member Yet? Sign Up
           </button>
+          <p>test user: test@gmail.com</p>
+          <p>PWD: test@123</p>
         </div>
       </div>
     </div>
